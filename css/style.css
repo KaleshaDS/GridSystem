@@ -58,22 +58,50 @@ nav a:hover{
 	border: 1px ridge gray;
 	margin:20px;
 }
-.capitulosp{
-	display: inline-block;  /*checar posicion dentro de esto*/
-	margin-left: 30px;
-	border: 1px solid black;
-	padding: 10px 20px;
-}
+
 .azul{
 	background-color: #CEF6F5;
 }	
-	
+.capitulop a{
+	text-decoration: none;
+	font-size: 18px;
+	font-family: sans-serif;
 }
 .capitulop{
-	border: 1px solid black;
-	text-align: center;
+	display: inline-block;
+	position: relative;
+	margin-left: 120px;
+	margin-right: 50px;
+
+}
+/*Configuracion del row de toda las opciones*/
+* img
+{
+	height: 100px;
+	width: 100px;
+	padding: 5px;
+	border: 1px ridge gray;
+	margin:15px 5px 0;
+}
+.cd1{
+	display: inline;
+	position: relative;
+	margin-left: 40px;
+}
+
+.cd1font{
+	display: inline;
+	margin-right: 50px;
+	position: relative;
+	right: 50px;
+}
+
+.cd1font a{
 	text-decoration: none;
+	font-size: 10px;
 	font-family: sans-serif;
-	font-weight: bold;
-	margin:0 80px;
+}
+.contrae{
+	background-color: red;
+	border: 1px solid black;
 }
