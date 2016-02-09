@@ -3,52 +3,70 @@
 header{
 	padding: 15px 0;
 	margin: 0;
-	color:#fff;
-	border-bottom: solid #333 1px;
 	background: #333;
 }
 .logo{
-	width: 80px;
-	height: 80px;
+	width: 300px;
+	height: 150px;
+	border: none;
+	margin: 20px;
+	-webkit-transition: all 0.8s ease-out;  /*Para que se mueva de meneito xD*/
+	-moz-transition: all 0.8s ease;
+	-ms-transition: all 0.8s ease;
 }
+.logo:hover {
+	-webkit-transform: rotate(-10deg);  /*Con esto hice que el logo se moviera al pasarle el mouse*/
+	-moz-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+
 nav ul{
 	list-style: none;
-	padding-top: 34px;
-	margin: 0 -15px 0 0;		/*Ajustes para mover la lista completa*/
+	margin: 0  30px 0 0;		/*Ajustes para mover la lista completa*/
 	float: right;
-	font-size: 14px;
-	line-height: 14px;
+	font-size: 30px;
 	text-transform: uppercase;
-	white-space: nowrap;
 }
 nav li{
+	font-family:Tahoma;
 	position: relative;
-	bottom: 50px;
-	right: 10px;			/*Ajustes para cada elemento de la lista*/
-	float: left;
+	bottom: 60px;
+	right: 100px;			/*Ajustes para cada elemento de la lista*/
 	margin: 0;
 	padding: 0;
 }
-nav li::hover a{
-	background: #FFFFFF;  /* EL selector hover es usado para seleccion elementosc cuando se pone el mouse sobre x elemento*/.
+nav li::hover {
+		color:#E2A9F3;
+		font-size: 20px;  /* EL selector hover es usado para seleccion elementosc cuando se pone el mouse sobre x elemento*/.
 }
 nav a{
 	text-decoration: none;
 	padding: 10px 15px;
-	color:#EEEEEE;
+	color:#D358F7;
 	text-shadow:2px 2px 4px #000000;
 }
 nav a:hover{
 	color:#FFFFFF;
 }
 
-/*Configuracion de row  para Titulo*/
+/*Configuracion para Titulo*/
 .ultmov{
 	font-size:24px;
-	font-family: sans-serif;
+	font-family:Tahoma;
 	display: inline-block;
 }
 
+p{
+	margin: 0;
+}
+
+.flecha{
+	text-decoration: none;
+}
+.titulo li{
+	text-decoration: none;
+}
 /* Configuracion de row "Ultimos Vistos"*/
 
 .principales{
@@ -65,55 +83,157 @@ nav a:hover{
 .capitulop a{
 	text-decoration: none;
 	font-size: 18px;
-	font-family: sans-serif;
+	font-family: Tahoma;
+	color:#B40486;
 }
 .capitulop{
 	display: inline-block;
 	position: relative;
-	margin-left: 120px;
-	margin-right: 50px;
+	margin-left: 70px;
+	margin-right: 90px;
 
 }
-/*Configuracion del row de toda las opciones*/
-* img
-{
-	height: 100px;
-	width: 100px;
-	padding: 5px;
-	border: 1px ridge gray;
-	margin:15px 5px 0;
-}
-.cd1{
-	display: inline;
-	position: relative;
-	margin-left: 40px;
+/*sliders felices*/
+#slider-wrapper {
+	float: left;
+  width: 940px;
+  height: 470px;
+  margin: 50px auto;
+  position: relative;
+  margin-bottom: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
-.cd1font{
-	width:100px;
-	font-size: 12px;
-	font-family: sans-serif;
-	font-weight:bold;	
-	text-align: center;
-	display:inline-block;
-	position: relative;
-	left:30px;	
-	margin-right:60px;
+#s1 {
+  padding: 6px;
+  background: #000000;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: -36px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
 }
 
-.cd1font a{
-	text-decoration: none;
+#s2 {
+  padding: 6px;
+  background: #000000;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: -12px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
 }
 
-.contrae{
-	height: 20px;
-	width:1000px;
-	position: relative;
-	margin-left: 0px;
-	padding-left: 20px;
+#s3 {
+  padding: 6px;
+  background: #000000;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: 12px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
 }
 
-/*Configuracion de columna de apps*/
+#s4 {
+  padding: 6px;
+  background: #000000;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: 36px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#s1:hover,
+#s2:hover,
+#s3:hover,
+#s4:hover {
+  opacity: .50;
+}
+
+.inner-wrapper {
+  width: 940px;
+  height: 470px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+.control {
+  display: none;
+}
+
+#Slide1:checked ~ .overflow-wrapper {
+  margin-left: 0%;
+}
+
+#Slide2:checked ~ .overflow-wrapper {
+  margin-left: -100%;
+}
+
+#Slide3:checked ~ .overflow-wrapper {
+  margin-left: -200%;
+}
+
+#Slide4:checked ~ .overflow-wrapper {
+  margin-left: -300%;
+}
+
+#Slide1:checked + #s1 {
+  opacity: 1;
+}
+
+#Slide2:checked + #s2 {
+  opacity: 1;
+}
+
+#Slide3:checked + #s3 {
+  opacity: 1;
+}
+
+#Slide4:checked + #s4 {
+  opacity: 1;
+}
+
+.overflow-wrapper {
+  width: 400%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.slide img {
+  width: 25%;
+  float: left;
+}
+/*Configuracion del video*/
+
+.youtube-player{
+	margin: 50px 10px 100px 50px;
+}
+
+/*Configuracion de columna de aprendizaje*/
 .links{
 	text-decoration: none;
 	font-weight: bold;
@@ -124,7 +244,7 @@ h4{
 	position: relative;
 	bottom: 1050px;
 	left: 1030px;
-	font-family: sans-serif;
+	font-family: Tahoma;
 	font-weight: bolder;
 	opacity: 0.8;
 	font-size: 15px;
@@ -140,6 +260,7 @@ h4{
 .links ul {
 	margin: 0 0 10px 4px;
 	position: relative;
+	font-family:Tahoma;
 
 	}
 
@@ -151,6 +272,7 @@ h4{
 	bottom: 1040px;
 	left: 1000px;
 	list-style: none;
+	
 }
 .links hr{
 	width: 300px;
@@ -185,7 +307,7 @@ footer{
 	text-align: center;
 }
 .clausula{
-	font-family: sans-serif;
+	font-family:Tahoma;
 	font-size: 12px;
 	padding:20px;
 }
@@ -208,4 +330,16 @@ footer a:visited {
 }
 .clausula li a{
 	text-decoration: none;
+}
+
+/*Configuracion texto informativo*/
+
+.texto{
+	display: inline-block;
+	height: 200px;
+	width: 900px;
+	margin: 50px;
+	font-family: Tahoma;
+	font-size: 18px;
+	text-align: left;
 }
